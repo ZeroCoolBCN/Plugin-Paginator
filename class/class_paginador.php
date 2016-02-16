@@ -276,6 +276,8 @@ class paginadorDelete {
 
         }
 
+        $this->_encabezado .='<th>Opciones</th>';
+
         /* cuerpo de la tabla */
         for ($j = 0; $j < $total_paginado; $j++) {
             $this->_cuerpo .= "<tr>";
