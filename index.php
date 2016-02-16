@@ -4,16 +4,21 @@
         <title>ZeroCool Paginate</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <!-- css carga del estilo bootstrap -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        
+        <!-- carga de los plugins JQUERY y BOOTSTRAP -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/bootbox.js/bootbox.js"></script>
+        <!-- carga el plugin paginator -->
         <script src="js/paginator.js"></script>
         <script>
             $(document).ready(function () {
-                $("#paginar").PaginateZeroCool({
+                $("#paginar").PaginateZeroCoolCrud({
                     path: 'test.php',
-                    content:'#paginar'
-                    
+                    pathDelete: 'delete.php',
+                    content:'#paginar'                    
                 })
             });
         </script>

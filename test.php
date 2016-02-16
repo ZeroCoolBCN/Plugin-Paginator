@@ -6,7 +6,7 @@ include './class/class_paginador.php';
 
 $pagina = $_GET['pagina'];
 
-$p = new paginador();
-$p->paginar("SELECT * FROM especialidades ",$pagina,4);
+$p = new paginadorDelete();
+$p->paginar("SELECT * FROM especialidades ",'id',$pagina,4);
 
 echo $p->tablaBootstrap();
