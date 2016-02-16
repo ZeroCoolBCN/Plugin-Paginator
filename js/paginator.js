@@ -95,9 +95,11 @@
 
             $('body').on('click', '.eliminar', function (e) {
                 var data = {
-                    id: $(this).attr('data-id')
+                    id: $(this).attr('data-id'),
+
                 };
 
+                var pagina = $(this).attr('data-pagina');
                 bootbox.confirm("Deseas Eliminar este registro?", function (result) {
                     if (result == true) {
                         $.ajax({
@@ -105,6 +107,7 @@
                             data: data,
                             success: function (succes) {
                                 bootbox.alert(succes);
+                                $(opts.content).load(opts.path + "?pagina="+pagina);
                             }
                         });
                     }
@@ -118,6 +121,7 @@
 
     $.fn.PaginateZeroCoolCrud.defaults = {
         btnDelete: true,
+        path:'http://localhost',
         pathDelete: 'http://localhost/delete.php',
         content: '#content'
     };
