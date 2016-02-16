@@ -114,7 +114,7 @@
                 });
                 e.preventDefault();
                 return false;
-            })
+            });
         });
     };
 
